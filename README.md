@@ -1,2 +1,6 @@
-# homebrew-antithesis
-Homebrew Tap for Antithesis
+To install Antithesis: 
+
+```console
+brew tap guergabo/antithesis 
+brew install antithesis
+```

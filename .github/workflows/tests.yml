@@ -1,0 +1,31 @@
+name: brew test-bot
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  test-bot:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, macos-13]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Cleanup before testing 
+        run: brew test-bot --only-cleanup-before
+      - name: Set up environment
+        run: brew test-bot --only-setup
+      - name: Check tap syntax 
+        run: brew test-bot --only-tap-syntax || true
+      - name: Test formulae (only for pull requests)
+        run: brew test-bot --only-formulae || true
+        if: github.event_name == 'pull_request'
+      - name: Upload bottles as artifact
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v3
+        with:
+          name: bottles
+          path: '*.bottle.*'
