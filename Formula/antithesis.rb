@@ -8,6 +8,12 @@ class Antithesis < Formula
   version "0.0.17"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/guergabo/homebrew-antithesis/releases/download/antithesis-0.0.17"
+    sha256 cellar: :any_skip_relocation, ventura:      "4fd322382146fffa04ec48a48917ee4bca4057bd67b421cdcb00c12bd364f979"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b695d43a4c15100ed47511d69f66ab91f19a44aef746fbac7f3b2dd373726770"
+  end
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.17/antithesis_0.0.17_darwin_amd64.tar.gz"
