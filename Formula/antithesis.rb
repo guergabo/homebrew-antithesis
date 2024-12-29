@@ -5,21 +5,21 @@
 class Antithesis < Formula
   desc "A platform for building the impossible."
   homepage "https://antithesis.com"
-  version "0.0.9"
+  version "0.0.10"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.9/antithesis_0.0.9_darwin_amd64.tar.gz"
-      sha256 "3358c2b99aa6df19a2925a358e44d8f015848b4d365a88784b2c667336caf5e1"
+      url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.10/antithesis_0.0.10_darwin_amd64.tar.gz"
+      sha256 "80c1b5f610acb22a5d141d1c0d08ad128131af78d79c8c531aeb030ea5fe07b0"
 
       def install
         bin.install "antithesis"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.9/antithesis_0.0.9_darwin_arm64.tar.gz"
-      sha256 "c7a8f5b3e1e4bf6ee06a168ebcaf56136d79cfa0c57c9d7f3d61f985413795ef"
+      url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.10/antithesis_0.0.10_darwin_arm64.tar.gz"
+      sha256 "6e72d3c340b1b5e93bb8424d471a3f08f5e8fbacab593708fca2046c030d8acb"
 
       def install
         bin.install "antithesis"
@@ -30,8 +30,8 @@ class Antithesis < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.9/antithesis_0.0.9_linux_amd64.tar.gz"
-        sha256 "2d45b62c944ba4ea7f56a06cd183f6295cf4b01006dc37ac64b485fab049b6d6"
+        url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.10/antithesis_0.0.10_linux_amd64.tar.gz"
+        sha256 "5a7b20046e8bddcbe62cfb696da560a43ba0f16af34ecb19d38d4ab61a487091"
 
         def install
           bin.install "antithesis"
@@ -40,8 +40,8 @@ class Antithesis < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.9/antithesis_0.0.9_linux_arm64.tar.gz"
-        sha256 "80378abe243aadcef2e50aa95bd2f4b8e659c361f98b2ad19474291e4a1a5bc6"
+        url "https://github.com/guergabo/antithesis-cli/releases/download/v0.0.10/antithesis_0.0.10_linux_arm64.tar.gz"
+        sha256 "81ddad9e90f22f6f156bc9bf0259742be36be5dd2304babeb771e6a043d33560"
 
         def install
           bin.install "antithesis"
