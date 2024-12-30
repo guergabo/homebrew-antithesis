@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   create-tag-and-release:
     # Only run if the PR was merged (not just closed)
