@@ -18,7 +18,7 @@ jobs:
       - name: Create tag and release
         uses: softprops/action-gh-release@v1
         with:
-          name: Release ${{ github.head_ref }}
+          name: v${{ github.head_ref }}
           tag_name: ${{ github.head_ref }}
           body: |
             Release created automatically from merged branch ${{ github.head_ref }}
